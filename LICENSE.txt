@@ -1,0 +1,27 @@
+----------------------------------DPRR and D-DPRR-------------------------------------------
+Codes for
+author: Tian Lan, Tongfang Li
+
+Datasets: 
+"01-data" folder contains research data of Qinan, Weijiabao, Xianyang, Zhangjiashan and Zhuangtou. Data types include:
+(1)meteorological data: air_pressure, wind_speed, temperature_avg, temperature_max, temperature_min, relative_humiduty, precipitation, sunshine_duration, ET0(calculated by the FAO Penman-Monteith equation)
+(2)runoff
+(3)baseflow
+(4)NDVI
+(5)ISR
+(6)NTL
+(7)POP
+
+Main analysis codes:
+\02-DCCA+DPRR\DPRR.py	Calculation of DPRR based on DCCA and DPCCA.The calculated DCCA, DPCCA, DPRR results are stored in excel format.
+\02-DCCA+DPRR\kde.py	Calculating the maximum kernel density corresponding value of the series.
+\03-DCCA+D-DPRR\D-DPRR.py	Calculating the D-DPRR results under different step conditions.The calculated D-DPRR results are stored in excel format.
+\04-Figure4\01-trend_test\TFPW-MK.py	The TFPW-MK method was used to test the trend.
+\04-Figure4\02-inconsistency_test\TFPW_Pettitt.m	Storing the function used for inconsistency test.
+\04-Figure4\02-inconsistency_test\TFPW_Pettitt_BS.m	The TFPW-Pettitt-BS method was used to test the inconsistency.
+\05-Figure5\01-Figure5a\Figure5a-violin-DCCA.py	Drawing a violin plot based on DCCA results calculated by "DPRR.py".
+\05-Figure5\02-Figure5b\Figure5b-heatmap-DCCA.py	Drawing a heatmap plot based on DCCA results calculated by "D-DPRR.py".
+\05-Figure5\03-Figure5c\Figure5c-MIC_year.py		Calculating the MIC results between pairs of ET0, BF, NDVI, ISR, NTL and POP.
+\06-Figure6\01-Figure6a\Figure6a-violin-DPRR.py	Drawing a violin plot based on DPRR results calculated by "DPRR.py".
+\06-Figure6\02-Figure6b\Figure6b-violin-DPRR-abs.py	Drawing a violin plot based on the absolute value of the DPRR results.
+\06-Figure6\03-Figure6c\Figure6c-heatmap-D-DPRR.py	Drawing a heatmap plot based on D-DPRR results calculated by "D-DPRR.py".
