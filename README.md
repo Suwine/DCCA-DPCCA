@@ -6,7 +6,7 @@
 
 The "01-data" folder contains research data for Qinan, Weijiabao, Xianyang, Zhangjiashan, and Zhuangtou. Data types include:
 
-1. Meteorological data:
+### Meteorological data
    - air_pressure
    - wind_speed
    - temperature_avg
@@ -17,7 +17,7 @@ The "01-data" folder contains research data for Qinan, Weijiabao, Xianyang, Zhan
    - sunshine_duration
    - ET0 (calculated by the FAO Penman-Monteith equation)
 
-2. Other data:
+### Other data
    - runoff
    - baseflow
    - NDVI
@@ -27,16 +27,16 @@ The "01-data" folder contains research data for Qinan, Weijiabao, Xianyang, Zhan
 
 ## Main Analysis Codes
 
-### 02-DCCA+DPRR
+### DPRR
 
 - `DPRR.py`: Calculation of DPRR based on DCCA and DPCCA. Results are stored in Excel format.
 - `kde.py`: Calculation of the maximum kernel density corresponding value of the series.
 
-### 03-DCCA+D-DPRR
+### D-DPRR
 
 - `D-DPRR.py`: Calculation of D-DPRR results under different step conditions. Results are stored in Excel format.
 
-### 04-Figure4
+### Non-stationarity_ analysis
 
 #### Trend Test
 
@@ -47,30 +47,30 @@ The "01-data" folder contains research data for Qinan, Weijiabao, Xianyang, Zhan
 - `TFPW_Pettitt.m`: Storing the function used for inconsistency test.
 - `TFPW_Pettitt_BS.m`: The TFPW-Pettitt-BS method was used to test inconsistency.
 
-### 05-Figure5
+### Precipitation-runoff relationships
 
-#### Figure5a
+#### Violin for DCCA
 
 - `Figure5a-violin-DCCA.py`: Drawing a violin plot based on DCCA results calculated by "DPRR.py".
 
-#### Figure5b
+#### Heatmap for DCCA
 
 - `Figure5b-heatmap-DCCA.py`: Drawing a heatmap plot based on DCCA results calculated by "D-DPRR.py".
 
-#### Figure5c
+#### MIC for year
 
 - `Figure5c-MIC_year.py`: Calculating the MIC results between pairs of ET0, BF, NDVI, ISR, NTL, and POP.
 
-### 06-Figure6
+### Driving levels and directions
 
-#### Figure6a
+#### absolute value
 
 - `Figure6a-violin-DPRR.py`: Drawing a violin plot based on DPRR results calculated by "DPRR.py".
 
-#### Figure6b
+#### Violin for absolute value of DPRR
 
 - `Figure6b-violin-DPRR-abs.py`: Drawing a violin plot based on the absolute value of the DPRR results.
 
-#### Figure6c
+#### Heatmap for D-DPRR
 
 - `Figure6c-heatmap-D-DPRR.py`: Drawing a heatmap plot based on D-DPRR results calculated by "D-DPRR.py".
